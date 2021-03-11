@@ -1,0 +1,30 @@
+---
+title: A minimal R Markdown example
+disqus: cboettig
+---
+
+```{r}
+knitr::opts_chunk$set(fig.path = "figure/")
+```
+
+## graphics
+
+We can render SVGs without any further configuration: 
+
+```{r dev="svg"}
+library(ggplot2)
+qplot(mpg, wt, data=mtcars, colour=cyl)
+qplot(mpg, wt, data=mtcars, size=cyl)
+```
+
+## inline code
+
+Yes I know the value of pi is `r pi`, and 2 times pi is `r 2*pi`.
+
+## math
+
+Sigh. You cannot live without math equations. OK, here we go: 
+
+$$\alpha + \beta=\gamma$$  
+
+
